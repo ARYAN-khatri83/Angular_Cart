@@ -31,3 +31,7 @@ export class ProductsComponent {
     this.cartService.addToCart(item);
   }
 }
+
+//components - data pass
+// local storage data - pass
+// service 
