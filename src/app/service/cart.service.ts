@@ -8,13 +8,15 @@ export class CartService {
   // when we click on cart button we had to call a method 
   public cartItemList:any=[]
   public productList = new BehaviorSubject<any>([]); // it acts as a boolean , we can emit and also pass a vlaue and also act a a subscriber where anyone can subsctibe whatever data is being emiited
+  // creaating a behavior subject to search the products from header to produ
+  public search = new BehaviorSubject<string>("");
+  
   // productList would act as a both bool and will act as observable and will helps us in emit data
   constructor() { }
 
   // methods
   getProducts(){
     return this.productList.asObservable();
-
   }
 
   addToCart(product:any){
