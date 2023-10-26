@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FashionPageComponent } from './component/fashion-page/fashion-page.component';
+// import { canDeactivateGuardService } from './service/can-deactivate-guard.service';
 
 
 
@@ -30,7 +31,8 @@ import { FashionPageComponent } from './component/fashion-page/fashion-page.comp
     ReactiveFormsModule
     
   ],
-  providers: [],
+  //providers: [canDeactivateGuardService],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

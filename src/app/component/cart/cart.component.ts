@@ -1,5 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +11,7 @@ export class CartComponent implements OnInit{
   // will store the values that r coming from getproduct
   public product : any = [];
   public grandTotal !: number
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService , private router:Router){}
 
   ngOnInit(): void {
     this.cartService.getProducts()
@@ -25,5 +26,8 @@ export class CartComponent implements OnInit{
   emptycart(){
     this.cartService.removeAllCart();
   }
-  
+
+  NavigateToProducts(){
+    this.router.navigate(['products'])
+  }
 }
